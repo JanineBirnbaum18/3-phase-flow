@@ -233,5 +233,4 @@ dependencies:
   - pip:
     - corner==2.0.1
     - emcee==2.2.1
-prefix: C:\Users\Janine\Anaconda3
 
