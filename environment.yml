@@ -7,3 +7,6 @@ dependencies:
   - pandas
   - scipy
   - opencv
+  - pip:
+    - emcee
+    - corner
