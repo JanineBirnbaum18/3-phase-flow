@@ -2,11 +2,12 @@ name: three-phase-flow
 channels:
   - conda-forge
 dependencies:
-  - numpy
-  - matplotlib
-  - pandas
-  - scipy
-  - opencv
+  - numpy=1.15.2
+  - matplotlib=3.0.0
+  - pandas=0.23.4
+  - scipy=1.1.0
+  - opencv=3.4.2
+  - pip=10.0.1
   - pip:
-    - emcee
-    - corner
+    - emcee==2.2.1
+    - corner==2.0.1
