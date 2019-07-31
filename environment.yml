@@ -1,13 +1,9 @@
-name: example-environment
+name: three-phase-flow
 channels:
   - conda-forge
 dependencies:
   - numpy
-  - psutil
-  - toolz
   - matplotlib
-  - dill
   - pandas
-  - partd
-  - bokeh
-  - dask
+  - scipy
+  - opencv
