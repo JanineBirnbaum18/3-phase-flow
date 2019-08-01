@@ -12,3 +12,4 @@ dependencies:
     - corner
     - emcee
     - tables
+    - google-api-python-client
