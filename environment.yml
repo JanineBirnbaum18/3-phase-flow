@@ -9,12 +9,12 @@ dependencies:
   - pandas
   - pip
   - os
-  - pickle
-  - io
-  - googleapiclient
-  - google_auth_oauthlib
-  - google
   - pip:
     - corner
     - emcee
     - tables
+    - io
+    - googleapiclient
+    - google_auth_oauthlib
+    - google
+    - pickle
