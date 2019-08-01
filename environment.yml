@@ -13,3 +13,4 @@ dependencies:
     - emcee
     - tables
     - google-api-python-client
+    - google-auth-oauthlib
