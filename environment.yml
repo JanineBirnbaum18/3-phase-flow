@@ -12,7 +12,3 @@ dependencies:
     - corner
     - emcee
     - tables
-    - googleapiclient
-    - google_auth_oauthlib
-    - google
-    - pickle
