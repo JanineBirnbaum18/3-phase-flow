@@ -1,6 +1,15 @@
 import numpy as np
 from trig_fund import *
 from syrup_prop import *
+import warnings
+
+# filter warnings regularly ecountered in the model
+warnings.filterwarnings("ignore", message="divide by zero encountered in true_divide")
+warnings.filterwarnings("ignore", message="divide by zero encountered in power")
+warnings.filterwarnings("ignore", message="invalid value encountered in multiply")
+warnings.filterwarnings("ignore", message="invalid value encountered in true_divide")
+warnings.filterwarnings("ignore", message="invalid value encountered in less")
+warnings.filterwarnings("ignore", message="overflow encountered in true_divide")
 
 def dambreak(x, h0, theta, rho, K, tauy, n, g, ts, i):
     
