@@ -4,7 +4,6 @@ import pandas as pd
 import sys
 sys.path.insert(0,"C:/Users/Janine/.local/share/emcee-master")
 import emcee as mc
-import corner
 
 from trig_fund import *
 from dambreak import dambreak
@@ -140,8 +139,10 @@ meta['n_post'] = n_post
 meta['K_std'] = K_std
 meta['tauy_std'] = tauy_std
 meta['n_std'] = n_std
+meta['theta_post'] = theta_post
+meta['theta_std'] = theta_std
 
 meta.to_hdf(title_str + '.h5', key='meta', mode='a')
 
-samples = pd.DataFrame({'K':K_fit, 'tauy':tauy_fit, 'n':n_fit, 'full':samples_full})
+samples = pd.DataFrame({'K':K_fit, 'tauy':tauy_fit, 'n':n_fit, 'theta':theta_fit, 'full':samples_full})
 samples.to_hdf(title_str + '.h5', key='s', mode='a')
