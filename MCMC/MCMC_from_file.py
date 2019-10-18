@@ -4,6 +4,7 @@ import pandas as pd
 import sys
 sys.path.insert(0,"C:/Users/Janine/.local/share/emcee-master")
 import emcee as mc
+import tqdm
 
 from trig_fund import *
 from dambreak import dambreak
