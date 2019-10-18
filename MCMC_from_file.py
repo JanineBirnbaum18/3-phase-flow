@@ -9,8 +9,8 @@ from trig_fund import *
 from dambreak import dambreak
 from syrup_prop import Visc
 
-
 vid = sys.argv[1]
+steps = sys.argv[2]
 
 # load video data
 
@@ -102,14 +102,14 @@ def lnprob(mu, x, y, yerr):
     
 # Create walkers
 ndim, nwalkers = 4, 16
-mu_pos = [init_pos + [10, 1e-2, 1e-2, theta_sig]*np.random.randn(ndim) for i in range(nwalkers)]
+mu_pos = [init_pos + [K_init/10, tauy_init/10, n_init/20, theta_sig]*np.random.randn(ndim) for i in range(nwalkers)]
 
 # Run MCMC 
-steps = 500
+#steps = 500
 sampler = mc.EnsembleSampler(nwalkers, ndim, lnprob, args=(x, y, yerr))
 sampler.run_mcmc(mu_pos, steps, progress=True);
 
-s = 150 # ignore initial samples
+s = min(150,steps//2) # ignore initial samples
 samples = sampler.chain[:, s:, :].reshape((-1, ndim))
 samples_full = sampler.chain[:, :, :].reshape((-1, ndim))
 
