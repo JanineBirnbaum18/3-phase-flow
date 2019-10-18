@@ -1,0 +1,7 @@
+name: three-phase-flow
+channels:
+  - defaults
+dependencies:
+  - numpy
+  - matplotlib
+  - pandas
