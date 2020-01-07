@@ -8,10 +8,9 @@ and
 
 Includes:
 
-__/pyflowgo/flowgo_relative_viscosity_model_bl.py__ which adds relative viscosity model
-__/pyflowgo/flowgo_yield_strength_model_bl.py__ which adds yield strength model
+__/pyflowgo/flowgo_relative_viscosity_model_bl.py__ which adds relative viscosity model\
+__/pyflowgo/flowgo_yield_strength_model_bl.py__ which adds yield strength model\
 __/pyflowgo/flowgo_model_factory.py__ modifies script to import the new models
 
-
-__/tests/relative_viscosity_model_bl_test.py__ which adds a test for the relative viscosity model
+__/tests/relative_viscosity_model_bl_test.py__ which adds a test for the relative viscosity model\
 __/test/yield_strength_model_bl_test.py__ which adds a test for the yield strength model
