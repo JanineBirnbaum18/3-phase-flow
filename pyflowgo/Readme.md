@@ -1,10 +1,10 @@
 # Changes to pyflowgo to incoporate experimentally-determined rheological constitutive relationships:
 
-<img src="https://latex.codecogs.com/gif.latex?$$\eta_r&space;=&space;\left(&space;1&space;-&space;\frac{\phi_{xtl}}{1&space;-&space;\phi_{gas}}&space;\right)^{-5/2}&space;(1&space;-&space;\phi_{gas})^{-2}$$" title="$$\eta_r = \left( 1 - \frac{\phi_{xtl}}{1 - \phi_{gas}} \right)^{-5/2} (1 - \phi_{gas})^{-2}$$" />
+<img src="https://latex.codecogs.com/svg.latex?\huge&space;$$\eta_r&space;=&space;\left(&space;1&space;-&space;\frac{\phi_{xtl}}{1&space;-&space;\phi_{gas}}&space;\right)^{-5/2}&space;(1&space;-&space;\phi_{gas})^{-2}$$" title="\huge $$\eta_r = \left( 1 - \frac{\phi_{xtl}}{1 - \phi_{gas}} \right)^{-5/2} (1 - \phi_{gas})^{-2}$$" />
 
 and 
 
-<img src="https://latex.codecogs.com/gif.latex?\tau_y&space;=&space;\ex{50(\phi_{xtl}&space;-&space;\phi_*)}&space;&plus;&space;\exp{5(\phi_{xtl}&space;&plus;&space;\phi_{gas}&space;-&space;\phi_*)}" title="\tau_y = \ex{50(\phi_{xtl} - \phi_*)} + \exp{5(\phi_{xtl} + \phi_{gas} - \phi_*)}" />
+<img src="https://latex.codecogs.com/svg.latex?\huge&space;\tau_y&space;=&space;\ex{50(\phi_{xtl}&space;-&space;\phi_*)}&space;&plus;&space;\exp{5(\phi_{xtl}&space;&plus;&space;\phi_{gas}&space;-&space;\phi_*)}" title="\huge \tau_y = \ex{50(\phi_{xtl} - \phi_*)} + \exp{5(\phi_{xtl} + \phi_{gas} - \phi_*)}" />
 
 Includes:
 
