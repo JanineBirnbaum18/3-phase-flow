@@ -1,0 +1,11 @@
+name: three-phase-flow
+channels:
+  - defaults
+dependencies:
+  - numpy
+  - matplotlib
+  - pandas
+  - pip
+  - pip:
+    - corner
+    - tables
