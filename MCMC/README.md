@@ -1,5 +1,5 @@
 # Markov-Chain Monte Carlo Method
-For model fitting of rheology and slope
+For alternative method of model fitting for rheology and slope
 
 ## Contains:
 
