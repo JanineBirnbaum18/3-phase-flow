@@ -44,7 +44,7 @@ class MyTestCase(unittest.TestCase):
         state.set_crystal_fraction(0.104)
         yield_strength = yield_strength_model_bl.compute_yield_strength(state, eruption_temperature=None)
 
-        self.assertAlmostEqual(yield_strength, 6.301316358882727,10)
+        self.assertAlmostEqual(yield_strength, 6.023801421221574,10)
 
     def test_compute_basal_shear_stress(self):
 
