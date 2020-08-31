@@ -10,7 +10,7 @@ from syrup_prop import Visc
 
 vid = sys.argv[1]
 
-path_to_file = r'/local/data/lava/janine/data/'
+path_to_file = r'/path/to/data/file/'
 meta = pd.read_hdf(path_to_file + vid + '.h5', key='meta')
 dat = pd.read_hdf(path_to_file + vid + '.h5', key='df')  
 
@@ -68,7 +68,7 @@ def EnKF(A_EnKF, data, dataerr):
 
     return Aa
     
-def dambreak_smooth(mu, res=50):
+def dambreak_smooth(mu, res=50): #increase resolution if solution does not converge
     K, tauy, n, theta = mu
     h, t = dambreak(x_grid, h0, theta, rho, K, tauy, n, 9.81, t_pos[-1], res*t_pos.size)
     X = np.zeros_like(t_pos)
