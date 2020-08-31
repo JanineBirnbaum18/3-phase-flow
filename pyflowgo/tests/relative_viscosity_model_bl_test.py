@@ -36,7 +36,7 @@ class MyTestCase(unittest.TestCase):
         state.set_crystal_fraction(0.15)
 
         relative_viscosity = relative_viscosity_model_bl.compute_relative_viscosity(state)
-        self.assertAlmostEqual(relative_viscosity, 266.6581616105008,10) # model at phi = 0.15, phi_b = 0.64
+        self.assertAlmostEqual(relative_viscosity, 18.92308922427485,10) # model at phi = 0.15, phi_b = 0.64
 
 if __name__ == '__main__':
     unittest.main()
