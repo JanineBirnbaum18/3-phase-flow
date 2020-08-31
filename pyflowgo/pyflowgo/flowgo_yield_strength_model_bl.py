@@ -67,7 +67,7 @@ class FlowGoYieldStrengthModelBirnbaumLev(pyflowgo.base.flowgo_base_yield_streng
         vesicle_fraction = self._vesicle_fraction_model.computes_vesicle_fraction(state)
 
         phi_crit = 0.3
-        tho_0 = math.exp(50*(crystal_fraction - phi_crit)) + math.exp(5*(crystal_fraction + vesicle_fraction - phi_crit))
+        tho_0 = math.pow(10,61*(crystal_fraction/(1 - vesicle_fraction) - phi_crit)) + math.pow(10,1.98*(crystal_fraction/(1 - vesicle_fraction) + vesicle_fraction - phi_crit))
         return tho_0
 
     def compute_basal_shear_stress(self, state, terrain_condition, material_lava):
