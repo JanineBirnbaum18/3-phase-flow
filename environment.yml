@@ -6,10 +6,9 @@ dependencies:
   - matplotlib
   - opencv
   - pandas
+  - jupyter
   - pip
   - pip:
     - corner
     - emcee
     - tables
-    - google-api-python-client
-    - google-auth-oauthlib

@@ -86,14 +86,13 @@ def dambreak_smooth(mu, res=50): #increase resolution if solution does not conve
 # load video data
 
 try:
-    meta.K_post
-    K_init = meta.K_post[0]
-    tauy_init = meta.tauy_post[0]
-    n_init = meta.n_post[0]
-except AttributeError:
     K_init = meta.K_guess[0]
     tauy_init = meta.tauy_guess[0]
     n_init = meta.n_guess[0]
+except: 
+    K_init = meta.K_post[0]
+    tauy_init = meta.tauy_post[0]
+    n_init = meta.n_post[0]    
 
 K_fluid = meta.K_fluid[0]
 H = meta.H[0]
@@ -121,7 +120,7 @@ npar = 4
 # Consistency, K (Pas)
 Kc0 = np.random.standard_normal(nens) * K_init/10 + K_init
 # yield strength, tau_y (Pa)
-tauyc0 = np.random.standard_normal(nens) * tauy_init/10 + tauy_init
+tauyc0 = np.random.standard_normal(nens) * (tauy_init+0.01)/10 + tauy_init+0.01 # increased by 0.01 to av
 # flow index, n
 nc0 = np.random.standard_normal(nens) * n_init/20 + n_init
 # slope (degrees)

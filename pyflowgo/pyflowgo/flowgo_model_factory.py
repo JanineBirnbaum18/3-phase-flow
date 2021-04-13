@@ -23,7 +23,7 @@ import pyflowgo.flowgo_yield_strength_model_basic
 import pyflowgo.flowgo_yield_strength_model_dragoni
 import pyflowgo.flowgo_yield_strength_model_ryerson
 import pyflowgo.flowgo_yield_strength_model_dragoni_alone
-import pyflowgo.flowgo_yield_strength_model_bl
+import pyflowgo.flowgo_yield_strength_model_bll
 import pyflowgo.flowgo_melt_viscosity_model_basic
 import pyflowgo.flowgo_melt_viscosity_model_shaw
 #import pyflowgo.flowgo_melt_viscosity_model_grd
@@ -37,7 +37,7 @@ import pyflowgo.flowgo_relative_viscosity_model_costa2
 import pyflowgo.flowgo_relative_viscosity_model_ptp1
 import pyflowgo.flowgo_relative_viscosity_model_ptp2
 import pyflowgo.flowgo_relative_viscosity_model_ptp3
-import pyflowgo.flowgo_relative_viscosity_model_bl
+import pyflowgo.flowgo_relative_viscosity_model_bll
 import pyflowgo.flowgo_relative_viscosity_bubbles_model_rigid
 import pyflowgo.flowgo_relative_viscosity_bubbles_model_defo
 import pyflowgo.flowgo_relative_viscosity_bubbles_model_no
@@ -197,12 +197,12 @@ class FlowgoModelFactory:
         elif self._relative_viscosity_model == "costa2":
             self._relative_viscosity_model_object = pyflowgo.flowgo_relative_viscosity_model_costa2.\
                 FlowGoRelativeViscosityModelCosta2()
-        elif self._relative_viscosity_model == "bl":
-            self._relative_viscosity_model_object = pyflowgo.flowgo_relative_viscosity_model_bl.\
-                FlowGoRelativeViscosityModelBirnbaumLev(vesicle_fraction_model=self._vesicle_fraction_model_object)
+        elif self._relative_viscosity_model == "bll":
+            self._relative_viscosity_model_object = pyflowgo.flowgo_relative_viscosity_model_bll.\
+                FlowGoRelativeViscosityModelBLL(vesicle_fraction_model=self._vesicle_fraction_model_object)
         else:
             raise NameError('Relative viscosity model must be "er" or "kd" or "mp" or "costa1" or "costa2" or "ptp1" or'
-                            '"ptp2" or "ptp3" or "bl"... ')
+                            '"ptp2" or "ptp3" or "bll"... ')
 
         assert isinstance(self._relative_viscosity_model_object,
                           pyflowgo.base.flowgo_base_relative_viscosity_model.FlowGoBaseRelativeViscosityModel)
@@ -240,11 +240,11 @@ class FlowgoModelFactory:
             self._yield_strength_model_object = pyflowgo.flowgo_yield_strength_model_dragoni_alone.FlowGoYieldStrengthModelDragoniAlone()
         elif self._yield_strength_model == "ryerson":
             self._yield_strength_model_object = pyflowgo.flowgo_yield_strength_model_ryerson.FlowGoYieldStrengthModelRyerson()
-        elif self._yield_strength_model == "bl":
-            self._yield_strength_model_object = pyflowgo.flowgo_yield_strength_model_bl.\
-                FlowGoYieldStrengthModelBirnbaumLev(vesicle_fraction_model=self._vesicle_fraction_model_object)
+        elif self._yield_strength_model == "bll":
+            self._yield_strength_model_object = pyflowgo.flowgo_yield_strength_model_bll.\
+                FlowGoYieldStrengthModelBLL(vesicle_fraction_model=self._vesicle_fraction_model_object)
         else:
-            raise NameError('Yield strength model must be "basic" or "dragoni" or "dragoni-alone" or "ryerson" or "bl"... ')
+            raise NameError('Yield strength model must be "basic" or "dragoni" or "dragoni-alone" or "ryerson" or "bll"... ')
 
         assert isinstance(self._yield_strength_model_object,
                           pyflowgo.base.flowgo_base_yield_strength_model.FlowGoBaseYieldStrengthModel)

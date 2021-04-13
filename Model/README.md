@@ -3,16 +3,12 @@ Flow of Herschel-Bulkley fluids on an inclined surface.
 
 ## Contains:
 
-Homogeneous flow.ipynb - Example implementation of flow and heat solutions.
+Homogeneous flow.ipynb - Example implementation of forward model and visualization of solution.
 
-dambreak.py - Numerical solutions to dambreak flow equations.
+dambreak.py - Numerical solution to dambreak flow equations.
 
-environment.yml - List of environment dependencies
-
-Size distribution tracking - Numerical solution to bubble size population evolution.
-
-syrup_prop.py - Data and model for temperature and density dependence of corn syrup.
+syrup_prop.py - Experimentally calibrated model for temperature-dependent viscosity and density of 77% sugar corn syrup.
 
 trig_fund.py - Shortcuts for trigonometric functions in degrees.
 
-Viscoplastic_Flow_Derivation.PDF - Derivation for flow equationsin dambreak.py
+Viscoplastic_Flow_Derivation.PDF - Derivation for flow equations and finite differences discretization in dambreak.py
