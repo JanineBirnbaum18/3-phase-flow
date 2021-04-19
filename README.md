@@ -18,3 +18,8 @@ EnKF parameter fitting and visualization.
 
 ### pyflowgo
 Application of rheology model to pyflowgo simulation of lava flows.
+
+## Workflow
+An experiment is processed by first running /Process_lab_data/Data_fitting.ipynb to extract the flow-front time-distance data and select initial parameters for EnKF inversion. 
+
+The EnKF inverstion is run using EnKF_from_file.py and the results are visualized in Visualize_EnKF.ipynb. 
