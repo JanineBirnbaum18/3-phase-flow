@@ -1,10 +1,10 @@
 # Changes to pyflowgo to incoporate experimentally-determined rheological constitutive relationships:
 
-$\eta_r = \left( 1 - \frac{\phi_{xtl}}{1 - \phi_{gas}} \right)^{-B_{solid}} (1 - \phi_{gas})^{-B_{gas}} \left( \dot{\gamma} \right)^{n-1}$
+$$\eta_r = \left( 1 - \frac{\phi_{xtl}}{1 - \phi_{gas}} \right)^{-B_{solid}} (1 - \phi_{gas})^{-B_{gas}} \left( \dot{\gamma} \right)^{n-1}$$
 
 and 
 
-$\tau_y = \exp{C_1(\phi_{xtl} - \phi_*)} + \exp{C_2(\phi_{xtl} + \phi_{gas} - \phi_*)}$
+$$\tau_y = \exp{C_1(\phi_{xtl} - \phi_*)} + \exp{C_2(\phi_{xtl} + \phi_{gas} - \phi_*)}$$
 
 To get complete code see: https://github.com/pyflowgo/pyflowgo
 
