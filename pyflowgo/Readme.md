@@ -19,5 +19,5 @@ __/pyflowgo/flowgo_model_factory.py__ modifies script to import the new models
 __/tests/relative_viscosity_model_bll_test.py__ which adds a test for the relative viscosity model\
 __/test/yield_strength_model_bll_test.py__ which adds a test for the yield strength model
 
-etna_bll.txt which provides input parameters for the Etna 2001 LSF1 lava flow
+etna_bll.txt which provides input parameters for the Etna 2001 LSF1 lava flow\
 Etna_slope_profile.txt which includes the extracted slope profile data
