@@ -1,10 +1,14 @@
 # Changes to pyflowgo to incoporate experimentally-determined rheological constitutive relationships:
 
-<img src="https://latex.codecogs.com/svg.latex?\large&space;$$\eta_r&space;=&space;\left(&space;1&space;-&space;\frac{\phi_{xtl}}{1&space;-&space;\phi_{gas}}&space;\right)^{-B_{solid}}&space;(1&space;-&space;\phi_{gas})^{-B_{gas}}$$" title="\large $$\eta_r = \left( 1 - \frac{\phi_{xtl}}{1 - \phi_{gas}} \right)^{-B_{solid}}} (1 - \phi_{gas})^{-B_{gas}}$$" />
+$\eta_r = \left( 1 - \frac{\phi_{xtl}}{1 - \phi_{gas}} \right)^{-B_{solid}} (1 - \phi_{gas})^{-B_{gas}} \left( \dot{\gamma} \right)^{n-1}$
 
 and 
 
-<img src="https://latex.codecogs.com/svg.latex?\large&space;\tau_y&space;=&space;\ex{C_1(\phi_{xtl}&space;-&space;\phi_*)}&space;&plus;&space;\exp{C_2(\phi_{xtl}&space;&plus;&space;\phi_{gas}&space;-&space;\phi_*)}" title="\large \tau_y = \ex{C_1(\phi_{xtl} - \phi_*)} + \exp{C_2(\phi_{xtl} + \phi_{gas} - \phi_*)}" />
+$\tau_y = \exp{C_1(\phi_{xtl} - \phi_*)} + \exp{C_2(\phi_{xtl} + \phi_{gas} - \phi_*)}$
+
+To get complete code see: https://github.com/pyflowgo/pyflowgo
+
+and dowload the files in this folder and replace flowgo_model_factory.py
 
 Includes:
 
@@ -14,3 +18,6 @@ __/pyflowgo/flowgo_model_factory.py__ modifies script to import the new models
 
 __/tests/relative_viscosity_model_bll_test.py__ which adds a test for the relative viscosity model\
 __/test/yield_strength_model_bll_test.py__ which adds a test for the yield strength model
+
+etna_bll.txt which provides input parameters for the Etna 2001 LSF1 lava flow
+Etna_slope_profile.txt which includes the extracted slope profile data
